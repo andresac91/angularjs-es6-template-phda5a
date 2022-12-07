@@ -1,0 +1,10 @@
+<div class="btn-group" uib-dropdown is-open="status.isopen">
+	<button type="button" class="btn btn-light" uib-dropdown-toggle>
+    {{'LANGUAGES.' + $ctrl.currentLanguage | translate}} <span class="caret"></span>
+  </button>
+	<div class="dropdown-menu dropdown-menu-right" uib-dropdown-menu>
+		<a class="dropdown-item" ng-repeat="language in $ctrl.languages" ng-click="$ctrl.update(language)">
+      {{'LANGUAGES.' + language | translate}}
+    </a>
+	</div>
+</div>

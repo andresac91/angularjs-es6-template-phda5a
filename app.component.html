@@ -1,0 +1,16 @@
+<app-alert ref="$ctrl.alert"></app-alert>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow" style="z-index:1000;">
+	<a class="navbar-brand" href="#">{{ 'APP_HEADLINE' | translate }}</a>
+	<choose-language languages="['en', 'de']"></choose-language>
+</nav>
+
+<app-breadcrumb current-state="$ctrl.currentState"></app-breadcrumb>
+
+<div class="p-3">
+	<div ui-view></div>
+
+  <div>countvalue: {{ $ctrl.store.count }}</div>
+</div>
+
+<app-global-dialog ref="$ctrl.dialog"></app-global-dialog>

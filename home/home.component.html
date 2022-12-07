@@ -1,0 +1,35 @@
+<h1>{{'WELCOME' | translate}}</h1>
+
+<h3>{{'INCLUDED' | translate}}</h3>
+
+<ul>
+	<li>UI-Router with States</li>
+	<li>ES6 Syntax</li>
+	<li>Modules</li>
+	<li>Components only</li>
+	<li>Translations with Language Switcher (angular-translate)</li>
+	<li>Custom Breadcrumb Component - communicating with ui-router</li>
+	<li>Globals Module for shared components, directives ...</li>
+	<li>DialogService to interact with a global DialogComponent</li>
+	<li>AlertService to interact with a global AlertComponent</li>
+	<li>Simple Store Service - to reflect data change application wide</li>
+	<li>Custom Subscription Service - to subscribe to certain events</li>
+	<li>Bootstrap 4 SCSS</li>
+	<li>FontAwesome 4</li>
+	<li>NgAnimate</li>
+	<li>Performance Settings enabled
+		<ul>
+			<li>commentDirectivesEnabled = false</li>
+			<li>cssClassDirectivesEnabled = false</li>
+		</ul>
+	</li>
+	<li>strictDi enabled in boostrapping</li>
+</ul>
+
+<button class="btn btn-secondary" ng-click="$ctrl.showDialog()">trigger dialog by service</button>
+
+<button class="btn btn-secondary" ng-click="$ctrl.messageSubscription()">trigger subscription</button>
+
+<button class="btn btn-secondary" ng-click="$ctrl.showRandomAlert()">show random alert</button>
+
+<button class="btn btn-secondary" ng-click="$ctrl.incrementCount()">increment count in homeComponent</button>

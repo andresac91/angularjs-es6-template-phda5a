@@ -1,0 +1,10 @@
+$enable-shadows: true;
+@import '~bootstrap/scss/bootstrap';
+
+.dropdown .dropdown-item:hover {
+  cursor: pointer;
+}
+
+.breadcrumb {
+  border-radius: 0;
+}

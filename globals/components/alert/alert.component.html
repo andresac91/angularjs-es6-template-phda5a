@@ -1,0 +1,41 @@
+<style>
+	.custom-alert-container {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 10500;
+	}
+
+	.custom-alert-container .alert {
+		border-radius: 0;
+		margin-bottom: 0;
+	}
+
+	.custom-alert.ng-enter {
+		transition: all linear 500ms;
+		opacity: 0;
+	}
+
+	.custom-alert.ng-enter-active {
+		opacity: 1;
+	}
+
+	.custom-alert.ng-leave {
+		transition: all linear 500ms;
+		opacity: 1;
+	}
+
+	.custom-alert.ng-leave-active {
+		opacity: 0;
+	}
+</style>
+
+<div class="custom-alert-container">
+	<div class="custom-alert alert alert-{{alert.type}} alert-dismissable shadow" ng-repeat="alert in $ctrl.alerts">
+		<strong>{{alert.title}}</strong>
+	{{alert.description}}
+   <button type="button" class="close" ng-click="$ctrl.cancelClicked(alert.id)">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+</div>

@@ -1,0 +1,40 @@
+<style>
+	app-dialog.ng-enter {
+		transition: all linear 250ms;
+	}
+
+  app-dialog.ng-enter .modal {
+		transition: all linear 250ms;
+		transform: translate(0, -100%);
+	}
+
+  app-dialog.ng-enter-active .modal {
+		transform: translate(0, 0);
+	}
+
+  app-dialog.ng-leave {
+		transition: all linear 250ms;
+	}
+
+	app-dialog.ng-leave .modal {
+		transition: all linear 250ms;
+	}
+
+	app-dialog.ng-leave-active .modal {
+		transform: translate(0, -100%);
+	}
+</style>
+
+<app-dialog ng-if="$ctrl.showDialog">
+	<app-dialog-header>
+		<h5 class="modal-title">some title</h5>
+		<button type="button" class="close" ng-click="$ctrl.onCancel()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </app-dialog-header>
+  <app-dialog-body>some body</app-dialog-body>
+  <app-dialog-footer>
+    	<button type="button" class="btn btn-default" ng-click="$ctrl.onCancel()">{{$ctrl.cancelButtonText}}</button>
+				<button type="button" class="btn btn-primary" ng-click="$ctrl.onOk()">{{$ctrl.okButtonText}}</button>
+  </app-dialog-footer>
+</app-dialog>
